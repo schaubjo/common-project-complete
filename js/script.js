@@ -45,7 +45,6 @@ function scrollToBottom() {
 function stopScrolling(event) {
     // Check if the click event is not on the scrollButton
     if (!event.target.closest('#scrollButton')) {
-        // Set the flag to stop the scrolling animation
         continueScrolling = false;
     }
 }

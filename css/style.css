@@ -78,7 +78,6 @@ nav a {
 }
 
 .current-page {
-    /* background-color: yellow; */
     text-decoration: underline;
     font-weight: bold;
 }
@@ -95,7 +94,6 @@ ol>li {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    /* grid-row-gap: -40px; */
 }
 
 .photo-gallery>img,
@@ -203,11 +201,6 @@ button {
         justify-content: space-evenly;
     }
 
-    /* ul>li {
-        display: inline-block;
-        height: 50px;
-    } */
-
     /* Make the skip link visible when focused */
     .skip:focus {
         position: static;
@@ -219,15 +212,6 @@ button {
         border: 2px solid darkblue;
         padding: 10px;
     }
-
-
-    /* @media (prefers-reduced-motion: no-preference) {
-
-        p:hover,
-        p:focus {
-            font-size: 25px;
-        }
-    } */
 }
 
 @media screen and (min-width: 1200px) {
