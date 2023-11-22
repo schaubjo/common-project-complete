@@ -1,0 +1,255 @@
+body {
+    background-color: blanchedalmond;
+    color: darkblue;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Open Sans", Courier, Impact, Arial;
+}
+
+img,
+video {
+    border: 5px solid darkblue;
+    width: 400px;
+    height: auto;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out
+}
+
+img:hover,
+video:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Courier, Impact, Arial;
+    text-align: center;
+}
+
+nav {
+    background-image: url("../images/yellow-paint-background.jpeg");
+    border: 2px solid darkblue;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: initial;
+    margin-left: 20px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+nav>ul {
+    list-style: none;
+}
+
+h2,
+h3 {
+    font-size: 30px;
+    font-family: Courier, Impact, Arial;
+    color: darkblue;
+    border-top-right-radius: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+nav a {
+    font-size: 18px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.current-page {
+    /* background-color: yellow; */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+ul>li,
+ol>li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    /* grid-row-gap: -40px; */
+}
+
+.photo-gallery>img,
+.photo-gallery>video {
+    width: 250px;
+    height: 200px;
+    border: 5px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+    justify-self: center;
+}
+
+.photo-gallery>p {
+    margin: 20px;
+}
+
+p {
+    line-height: 2;
+}
+
+.slide-left {
+    animation: slide-left 3s forwards;
+}
+
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.material-icons {
+    position: relative;
+    top: 2px;
+    margin-right: 2px;
+}
+
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide-left {
+        animation: none;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    p {
+        animation: none;
+    }
+
+    .gif {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .photo-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .photo-gallery>img,
+    .photo-gallery>video {
+        width: 300px;
+        height: 240px;
+    }
+
+    nav>ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* ul>li {
+        display: inline-block;
+        height: 50px;
+    } */
+
+    /* Make the skip link visible when focused */
+    .skip:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    .page-link-header {
+        border: 2px solid darkblue;
+        padding: 10px;
+    }
+
+
+    /* @media (prefers-reduced-motion: no-preference) {
+
+        p:hover,
+        p:focus {
+            font-size: 25px;
+        }
+    } */
+}
+
+@media screen and (min-width: 1200px) {
+    .photo-gallery {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .photo-gallery>img,
+    .photo-gallery>video {
+        width: 300px;
+        height: 240px;
+    }
+
+    #skip {
+        display: block;
+    }
+
+    .page-link-header {
+        border: 2px solid darkblue;
+        padding: 10px;
+    }
+}
